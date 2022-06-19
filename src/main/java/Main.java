@@ -32,9 +32,7 @@ public class Main {
             //div[@data-hveid='CDgQAA']/.. - обращение к родителю найденного элемента
             //div[@data-hveid='CDgQAA']/parent::div - - обращение по тегу к родителю найденного элемента
             //div[@data-hveid='CDgQAA']/following-sibling::div - обращение по тегу к соседнему от найденного элемента
-            
-         */
-         */
+
          */
     }
 }
