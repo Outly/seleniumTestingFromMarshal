@@ -2,7 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Main {
+public class XPathExamples {
     public static void main(String[] args) {
 
         // Установка драйвера, открытие сайта с помощью драйвера
