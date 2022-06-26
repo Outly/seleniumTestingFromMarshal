@@ -2,9 +2,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import java.time.Duration;
 
-public class Actions {
+public class ActionsSome {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "D:\\webdrivers\\chromedriver.exe");
         ChromeDriver driver = new ChromeDriver();
@@ -18,7 +19,7 @@ public class Actions {
         // Очищает поле ввода, в котором что-либо введено
         input.clear();
 
-        org.openqa.selenium.interactions.Actions actions = new org.openqa.selenium.interactions.Actions(driver);
+        Actions actions = new Actions(driver);
 
         // Клик правой кнопкой мыши
         actions.contextClick();
