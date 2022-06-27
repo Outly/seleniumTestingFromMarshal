@@ -2,7 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="test 1">
-        <!-- В теге указываем тесты, которые хотим запустить -->
+        <!-- В теге parameter указываем переменные и значения, которые добавлены в тесты -->
+        <parameter name="db" value="SQL"></parameter>
+        <!-- В теге class указываем классы, в которых хотим запустить все тесты -->
         <classes>
             <class name="Smoke.Test1"></class>
         </classes>
@@ -11,7 +13,7 @@
         <!-- В тегах groups, run, include указываем необходимую группу тестов -->
         <groups>
             <run>
-                <include name="smokeTest"/>
+                <include name="regress"/>
             </run>
         </groups>
         <!-- В теге указываем пакеты с тестами, которые хотим запустить -->

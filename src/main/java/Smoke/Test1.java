@@ -1,13 +1,16 @@
 package Smoke;
 
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class Test1 {
 
     // Группируем тест с помощью groups
-    @Test (groups = {"smokeTest", "regress"})
-    public void test1 () {
-        System.out.println("Test 1");
+    // В параметрах указываем переменную db
+    @Parameters ("db")
+    @Test (groups = {"smokeTest"})
+    public void test1 (String db) {
+        System.out.println("Test 1" + db);
     }
 
     @Test (groups = {"regress"})
