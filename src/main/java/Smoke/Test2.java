@@ -1,4 +1,5 @@
 package Smoke;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -13,10 +14,14 @@ public class Test2 {
         };
     }
 
-    // Подключение провайдера и использование данных из него
-    @Test (dataProvider = "provider")
+
+    @Test (dataProvider = "provider", // Подключение провайдера и использование данных из него
+            retryAnalyzer = Retry.class) // Подключаем написанный retryAnalyzer
     public void test2 (String elem1, int elem2) {
         System.out.println("Test 2" + " " + elem1 + " " + elem2);
+        Assert.fail(); // Ломаем наш тест
     }
+
+
 
 }
