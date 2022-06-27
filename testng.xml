@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="D:/Programming/seleniumTestingFromMarshal">
+    <test verbose="2" preserve-order="true" name="test 1">
+        <!-- В теге указываем тесты, которые хотим запустить -->
         <classes>
-            <class name="Test1"></class>
+            <class name="Smoke.Test1"></class>
         </classes>
     </test>
+    <test name="test 2">
+        <!-- В тегах groups, run, include указываем необходимую группу тестов -->
+        <groups>
+            <run>
+                <include name="smokeTest"/>
+            </run>
+        </groups>
+        <!-- В теге указываем пакеты с тестами, которые хотим запустить -->
+        <packages>
+            <package name="Smoke"></package>
+        </packages>
+    </test>
+
 </suite>
