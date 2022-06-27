@@ -18,7 +18,10 @@ public class Test1 {
         System.out.println("Test 11");
     }
 
-    @Test (groups = {"regress"})
+    @Test (groups = {"regress"},
+            // dependsOnGroups = "smokeTest", // Делает данный тест зависимым от группы тестов smokeTest
+            dependsOnMethods = "test11", // Делает данный тест зависимым от теста test11
+            alwaysRun = true) // С данной настройкой зависимый тест выполняется всегда, если false, то выполняется в случае пройденного test11
     public void test111 () {
         System.out.println("Test 111");
     }
